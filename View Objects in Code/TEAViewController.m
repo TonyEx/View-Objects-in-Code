@@ -10,6 +10,10 @@
 
 @interface TEAViewController ()
 
+@property (strong, nonatomic) UILabel *myLabel;
+@property (strong, nonatomic) UITextField *myTextField;
+@property (strong, nonatomic) UIButton *myButton;
+
 @end
 
 @implementation TEAViewController
@@ -54,10 +58,10 @@
 }
 
 
--(void) myButtonPressed:(UIButton *)button
+-(void) myButtonPressed:(UIButton *)sender
 {
 	self.myLabel.text = self.myTextField.text;
-	
+	[self.myTextField resignFirstResponder];
 
 }
 
